@@ -119,14 +119,16 @@ class _LoginPagesState extends State<LoginPage> {
               // print(result);
               if(result)
                 {
-                  StatusAlert.show(
-                    context,
-                    duration: const Duration(seconds: 5),
-                    title: 'Login Sucessfull',
-                    subtitle: 'Welcom $userName',
-                    configuration: const IconConfiguration(icon: Icons.done),
-                    maxWidth: 260,
-                  );
+                  // StatusAlert.show(
+                  //   context,
+                  //   duration: const Duration(seconds: 5),
+                  //   title: 'Login Sucessfull',
+                  //   subtitle: 'Welcom $userName',
+                  //   configuration: const IconConfiguration(icon: Icons.done),
+                  //   maxWidth: 260,
+                  // );
+
+                  Navigator.pushReplacementNamed(context, '/home');
                 }
               else
                 {

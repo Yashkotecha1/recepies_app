@@ -18,6 +18,10 @@ class HTTPService
 
   Future<void> setup({String? bearerToken}) async{
     final headers ={ "Content-Type":"application/json" };
+    if(bearerToken != null)
+      {
+        headers["Authorization"] = "bearer $bearerToken";
+      }
     final options = BaseOptions(
       baseUrl: API_BASE_URL,
       headers: headers,
@@ -44,5 +48,16 @@ class HTTPService
     catch(e){
       print(e);
     }
+  }
+  Future<Response?> get(String path)
+  async {
+    try{
+      final response = await _dio.get(path);
+      return response;
+    }
+    catch(e){
+      print(e);
+    }
+    return null;
   }
 }
