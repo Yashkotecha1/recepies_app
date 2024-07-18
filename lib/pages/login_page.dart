@@ -75,7 +75,7 @@ class _LoginPagesState extends State<LoginPage> {
                     return "Enter a UserName";
                   }
               },
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Username",
               ),
             ),
@@ -95,7 +95,7 @@ class _LoginPagesState extends State<LoginPage> {
                  return "Enter a Valid  Password";
             }
           },
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Password",
               ),
             ),

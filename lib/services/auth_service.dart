@@ -20,7 +20,6 @@ class AuthService
         var response = await  _httpService.post('auth/login', {
          "username": username,
          "password" : password,
-          "expiresInMins": 30
         });
         if(response?.statusCode == 200 && response?.data !=null)
           {
